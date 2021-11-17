@@ -27,8 +27,7 @@ export const ImageContextProvider = ({ children }) => {
         if(searchImageQuery) {
             searchImages(searchImageQuery)
                 .then(res => {
-                    console.log('res SearchBox: ', res);
-                    console.log('res.data SearchBox: ', res.data);
+                    console.log('process.env.REACT_APP_ACCESS_KEY: ', process.env.REACT_APP_ACCESS_KEY);
                     setImages(res.data.results);
                     setIsLoading(false);
                     setIsSearchResultEmpty(false);
@@ -42,7 +41,6 @@ export const ImageContextProvider = ({ children }) => {
                 })
         } else fetchImageThubmnails()
           .then(res => {
-              console.log('res ImageThumbnailsList: ', res);
               setImages(res.data);
               setTimeout(() => {
                 setIsLoading(false);
