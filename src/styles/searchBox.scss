@@ -1,0 +1,35 @@
+.search-box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px;
+
+  label {
+    padding-right: 10px;
+  }
+
+  .label-search {
+    padding-right: 10px;
+  }
+
+  .input-search {
+    width: 400px;
+    height: 35px;
+    caret-color: rgb(76, 0, 255);
+
+    &::placeholder {
+      color: rgb(158, 148, 130);
+      font-size: 1.5em;
+      opacity: 0.5;
+    }
+
+    &:focus-within {
+      background: #9ba8b3;
+      outline: none;
+    }
+  }
+
+  .search-icon {
+    padding-left: 10px;
+  }
+}
